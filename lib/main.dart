@@ -11,27 +11,37 @@ class MyApp extends StatelessWidget {
 
   Future<dynamic> channelMethodHandler(MethodCall methodCall) async {
     String action = methodCall.method;
-    if (action == "createWallet") {
-      print("Going to create a wallet");
-      await WalletManager.getInstance().createWallet();
-      return await WalletManager.getInstance().getPublicAddress();
+    switch (action) {
+      case "createWallet":
+        return await createWallet();
+      case "getWalletAddress":
+        return await getWalletAddress();
+      case "deleteWallet":
+        return await deleteWallet();
+      default:
+        throw PlatformException(
+            code: 'Unimplemented',
+            details:
+                'The method ${methodCall.method} is not implemented in WalletManager');
     }
-    if (action == "getWalletAddress") {
-      print("calling getWalletAddress");
-      String? address = await WalletManager.getInstance().getPublicAddress();
-      return address ?? "no address";
-    }
+  }
 
-    if (action == "deleteWallet") {
-      print("calling deleteWallet");
-      await WalletManager.getInstance().permanentlyDeleteWallet();
-      return true;
-    }
+  Future<String> createWallet() async {
+    print("calling createWallet");
+    await WalletManager.getInstance().createWallet();
+    return (await WalletManager.getInstance().getPublicAddress())!;
+  }
 
-    throw PlatformException(
-        code: 'Unimplemented',
-        details:
-            'The method ${methodCall.method} is not implemented in WalletManager');
+  Future<String> getWalletAddress() async {
+    print("calling getWalletAddress");
+    String? address = await WalletManager.getInstance().getPublicAddress();
+    return address ?? "no address";
+  }
+
+  Future<bool> deleteWallet() async {
+    print("calling deleteWallet");
+    await WalletManager.getInstance().permanentlyDeleteWallet();
+    return true;
   }
 
   @override
