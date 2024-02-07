@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/nick/Projects/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/nick/Projects/rly_sdk"
+export "FLUTTER_ROOT=/Users/ryanweald/.asdf/installs/flutter/3.16.9-stable"
+export "FLUTTER_APPLICATION_PATH=/Users/ryanweald/code/rly/flutter-in-native-apps/wrapper_module"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
