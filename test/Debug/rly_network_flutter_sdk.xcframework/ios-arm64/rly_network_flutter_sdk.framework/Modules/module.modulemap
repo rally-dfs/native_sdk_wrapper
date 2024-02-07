@@ -1,0 +1,11 @@
+framework module rly_network_flutter_sdk {
+  umbrella header "rly_network_flutter_sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module rly_network_flutter_sdk.Swift {
+  header "rly_network_flutter_sdk-Swift.h"
+  requires objc
+}

@@ -1,0 +1,824 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Flutter",
+        "printedName": "Flutter",
+        "declKind": "Import",
+        "moduleName": "rly_network_flutter_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "rly_network_flutter_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "rly_network_flutter_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FlutterSdkPlugin",
+        "printedName": "FlutterSdkPlugin",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterPluginRegistrar",
+                "printedName": "Flutter.FlutterPluginRegistrar",
+                "usr": "c:objc(pl)FlutterPluginRegistrar"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@rly_network_flutter_sdk@objc(cs)FlutterSdkPlugin(cm)registerWithRegistrar:",
+            "mangledName": "$s23rly_network_flutter_sdk16FlutterSdkPluginC8register4withySo0eG9Registrar_p_tFZ",
+            "moduleName": "rly_network_flutter_sdk",
+            "static": true,
+            "objc_name": "registerWithRegistrar:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handle",
+            "printedName": "handle(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterMethodCall",
+                "printedName": "Flutter.FlutterMethodCall",
+                "usr": "c:objc(cs)FlutterMethodCall"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@rly_network_flutter_sdk@objc(cs)FlutterSdkPlugin(im)handleMethodCall:result:",
+            "mangledName": "$s23rly_network_flutter_sdk16FlutterSdkPluginC6handle_6resultySo0E10MethodCallC_yypSgctF",
+            "moduleName": "rly_network_flutter_sdk",
+            "objc_name": "handleMethodCall:result:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterSdkPlugin",
+                "printedName": "rly_network_flutter_sdk.FlutterSdkPlugin",
+                "usr": "c:@M@rly_network_flutter_sdk@objc(cs)FlutterSdkPlugin"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@rly_network_flutter_sdk@objc(cs)FlutterSdkPlugin(im)init",
+            "mangledName": "$s23rly_network_flutter_sdk16FlutterSdkPluginCACycfc",
+            "moduleName": "rly_network_flutter_sdk",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@rly_network_flutter_sdk@objc(cs)FlutterSdkPlugin",
+        "mangledName": "$s23rly_network_flutter_sdk16FlutterSdkPluginC",
+        "moduleName": "rly_network_flutter_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "rly_network_flutter_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "rly_network_flutter_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RlyNetworkMobileSdk",
+        "printedName": "RlyNetworkMobileSdk",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "hello",
+            "printedName": "hello()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC5helloSSyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC5helloSSyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBundleId",
+            "printedName": "getBundleId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC11getBundleIdSSyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC11getBundleIdSSyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMnemonic",
+            "printedName": "getMnemonic()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC11getMnemonicSSSgyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC11getMnemonicSSSgyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mnemonicBackedUpToCloud",
+            "printedName": "mnemonicBackedUpToCloud()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC23mnemonicBackedUpToCloudSbyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC23mnemonicBackedUpToCloudSbyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateMnemonic",
+            "printedName": "generateMnemonic()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC16generateMnemonicSSyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC16generateMnemonicSSyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveMnemonic",
+            "printedName": "saveMnemonic(_:saveToCloud:rejectOnCloudSaveFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC12saveMnemonic_0I7ToCloud08rejectOnL11SaveFailureSbSS_S2btF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC12saveMnemonic_0I7ToCloud08rejectOnL11SaveFailureSbSS_S2btF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteMnemonic",
+            "printedName": "deleteMnemonic()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC14deleteMnemonicSbyF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC14deleteMnemonicSbyF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPrivateKeyFromMnemonic",
+            "printedName": "getPrivateKeyFromMnemonic(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23rly_network_flutter_sdk19RlyNetworkMobileSdkC25getPrivateKeyFromMnemonicyypSSF",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC25getPrivateKeyFromMnemonicyypSSF",
+            "moduleName": "rly_network_flutter_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RlyNetworkMobileSdk",
+                "printedName": "rly_network_flutter_sdk.RlyNetworkMobileSdk",
+                "usr": "c:@M@rly_network_flutter_sdk@objc(cs)RlyNetworkMobileSdk"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@rly_network_flutter_sdk@objc(cs)RlyNetworkMobileSdk(im)init",
+            "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkCACycfc",
+            "moduleName": "rly_network_flutter_sdk",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@rly_network_flutter_sdk@objc(cs)RlyNetworkMobileSdk",
+        "mangledName": "$s23rly_network_flutter_sdk19RlyNetworkMobileSdkC",
+        "moduleName": "rly_network_flutter_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 222,
+      "length": 25,
+      "value": "\"rly_network_flutter_sdk\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 515,
+      "length": 20,
+      "value": "\"getPlatformVersion\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 552,
+      "length": 6,
+      "value": "\"iOS \""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 13,
+      "value": "\"getBundleId\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 682,
+      "length": 21,
+      "value": "\"generateNewMnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 773,
+      "length": 27,
+      "value": "\"getPrivateKeyFromMnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 884,
+      "length": 10,
+      "value": "\"mnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1161,
+      "length": 13,
+      "value": "\"getMnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1243,
+      "length": 25,
+      "value": "\"mnemonicBackedUpToCloud\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1349,
+      "length": 16,
+      "value": "\"deleteMnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1437,
+      "length": 14,
+      "value": "\"saveMnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1559,
+      "length": 10,
+      "value": "\"mnemonic\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1623,
+      "length": 13,
+      "value": "\"saveToCloud\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/FlutterSdkPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 1701,
+      "length": 26,
+      "value": "\"rejectOnCloudSaveFailure\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/KeyChainHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1374,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/KeyChainHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1767,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 93,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 118,
+      "length": 16,
+      "value": "\"WALLET_STORAGE\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 16,
+      "value": "\"BIP39_MNEMONIC\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 13,
+      "value": "\"Hello World\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 945,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1225,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1522,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 1550,
+      "length": 9,
+      "value": "\"failure\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 1647,
+      "length": 9,
+      "value": "\"failure\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2123,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2286,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2420,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 2444,
+      "length": 9,
+      "value": "\"failure\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2621,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2632,
+      "length": 3,
+      "value": "512"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2638,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 2733,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 2892,
+      "length": 11,
+      "value": "\"secp256k1\""
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2949,
+      "length": 10,
+      "value": "0x80000000"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2963,
+      "length": 2,
+      "value": "44"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3039,
+      "length": 10,
+      "value": "0x80000000"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3053,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3129,
+      "length": 10,
+      "value": "0x80000000"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3143,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3205,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3281,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nick\/.pub-cache\/hosted\/pub.dev\/rly_network_flutter_sdk-0.2.0\/ios\/Classes\/RlyNetworkMobileSdk.swift",
+      "kind": "Array",
+      "offset": 3352,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}
