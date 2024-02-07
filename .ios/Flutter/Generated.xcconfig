@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Users/ryanweald/.asdf/installs/flutter/3.16.9-stable
-FLUTTER_APPLICATION_PATH=/Users/ryanweald/code/rly/flutter-in-native-apps/wrapper_module
+FLUTTER_APPLICATION_PATH=/Users/ryanweald/code/rly/flutter-in-native-apps/native_sdk_wrapper
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
