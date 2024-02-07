@@ -17,6 +17,7 @@ class ChannelHandler {
   }
 
   void register() {
+    print("Register called");
     _channel.setMethodCallHandler(_handleChannelMethodCall);
   }
 
@@ -29,6 +30,8 @@ class ChannelHandler {
         return await getWalletAddress();
       case "deleteWallet":
         return await deleteWallet();
+      case "configureEnvironment":
+        return await configureEnvironment(methodCall.arguments);
       case "claimRly":
         return await claimRly();
       default:
@@ -37,6 +40,22 @@ class ChannelHandler {
             details:
                 'The method ${methodCall.method} is not implemented in WalletManager');
     }
+  }
+
+  Future<bool> configureEnvironment(dynamic channelArgs) async {
+    _apiKey = channelArgs[0] as String;
+
+    if (channelArgs[1] == "mainnet") {
+      _currentNetwork = rlyPolygonNetwork;
+    } else if (channelArgs[1] == "mumbai") {
+      _currentNetwork = rlyMumbaiNetwork;
+    } else {
+      print("The network ${channelArgs[1]} is not valid");
+    }
+
+    _currentNetwork!.setApiKey(_apiKey!);
+
+    return true;
   }
 
   Future<String> createWallet() async {
