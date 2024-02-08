@@ -77,9 +77,16 @@ class ChannelHandler {
   }
 
   Future<dynamic> claimRly() async {
-    Network mumbai = rlyMumbaiNetwork;
-    print("calling claimRly");
-    String txnHash = await mumbai.claimRly();
+    if (_currentNetwork == null) {
+      print("Missing network config");
+      return false;
+    }
+    String txnHash = "";
+    try {
+      txnHash = await _currentNetwork!.claimRly();
+    } catch (e) {
+      print("Error: $e");
+    }
     return txnHash;
   }
 }
