@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:rly_network_flutter_sdk/network.dart';
-import 'package:rly_network_flutter_sdk/wallet_manager.dart';
+import 'package:rly_network_flutter_sdk/rly_network_flutter_sdk.dart';
 
 class ChannelHandler {
   final MethodChannel _channel;
