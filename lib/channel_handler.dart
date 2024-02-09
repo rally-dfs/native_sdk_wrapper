@@ -24,7 +24,7 @@ class ChannelHandler {
     String action = methodCall.method;
     switch (action) {
       case "createWallet":
-        return await createWallet();
+        return await createWallet(methodCall.arguments);
       case "getWalletAddress":
         return await getWalletAddress();
       case "deleteWallet":
@@ -57,9 +57,16 @@ class ChannelHandler {
     return true;
   }
 
-  Future<String> createWallet() async {
-    print("calling createWallet");
-    await WalletManager.getInstance().createWallet();
+  Future<String> createWallet(dynamic channelArgs) async {
+    bool saveToCloud = channelArgs["saveToCloud"] ?? true;
+    bool rejectOnCloudSaveFailure =
+        channelArgs["rejectOnCloudSaveFailure"] ?? saveToCloud;
+
+    await WalletManager.getInstance().createWallet(
+        storageOptions: KeyStorageConfig(
+            saveToCloud: saveToCloud,
+            rejectOnCloudSaveFailure: rejectOnCloudSaveFailure));
+
     return (await WalletManager.getInstance().getPublicAddress())!;
   }
 
