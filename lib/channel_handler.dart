@@ -119,7 +119,7 @@ class ChannelHandler {
   /// destinationAddress: String
   /// amount: String
   /// tokenAddress: String (optional, default is RLY token address)
-  /// wrapperType (optional, default is Permit)
+  /// wrapperType (optional, default is ExecuteMetaTransaction)
   Future<String?> transferPermit(dynamic channelArgs) async {
     if (_currentNetwork == null) {
       print("Missing network config");
