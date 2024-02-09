@@ -33,6 +33,8 @@ class ChannelHandler {
         return await configureEnvironment(methodCall.arguments);
       case "claimRly":
         return await claimRly();
+      case "transferPermit":
+        return await transferPermit(methodCall.arguments);
       case "getBalance":
         return await getBalance();
       default:
@@ -112,4 +114,34 @@ class ChannelHandler {
     return balance;
   }
 
+  /// Transfer ERC-20 tokens using permit
+  /// Expects the channel call to include arguments in the form of a map with the following keys:
+  /// destinationAddress: String
+  /// amount: String
+  /// tokenAddress: String (optional, default is RLY token address)
+  /// wrapperType (optional, default is Permit)
+  Future<String?> transferPermit(dynamic channelArgs) async {
+    if (_currentNetwork == null) {
+      print("Missing network config");
+      return null;
+    }
+    String destinationAddress = channelArgs["destinationAddress"];
+    String amount = channelArgs["amount"];
+    String? tokenAddress = channelArgs["tokenAddress"];
+
+    MetaTxMethod method = channelArgs["wrapperType"] == "Permit"
+        ? MetaTxMethod.Permit
+        : MetaTxMethod.ExecuteMetaTransaction;
+
+    print("Going to transfer $amount to $destinationAddress");
+    String txnHash = "";
+    try {
+      txnHash = await _currentNetwork!.transferExact(
+          destinationAddress, BigInt.parse(amount), method,
+          tokenAddress: tokenAddress);
+    } catch (e) {
+      print("Error: $e");
+    }
+    return txnHash;
+  }
 }
