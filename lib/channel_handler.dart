@@ -33,6 +33,8 @@ class ChannelHandler {
         return await configureEnvironment(methodCall.arguments);
       case "claimRly":
         return await claimRly();
+      case "getBalance":
+        return await getBalance();
       default:
         throw PlatformException(
             code: 'Unimplemented',
@@ -95,4 +97,19 @@ class ChannelHandler {
     }
     return txnHash;
   }
+
+  Future<String> getBalance() async {
+    if (_currentNetwork == null) {
+      print("Missing network config");
+      return "Missing network config";
+    }
+    String balance = "";
+    try {
+      balance = (await _currentNetwork!.getExactBalance()).toString();
+    } catch (e) {
+      print("Error: $e");
+    }
+    return balance;
+  }
+
 }
