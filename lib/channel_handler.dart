@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'dart:convert';
 import 'package:rly_network_flutter_sdk/rly_network_flutter_sdk.dart';
 
 class ChannelHandler {
@@ -38,6 +39,8 @@ class ChannelHandler {
       case "getBalance":
         return await getBalance();
       default:
+      case "sign":
+
         throw PlatformException(
             code: 'Unimplemented',
             details:
@@ -143,5 +146,19 @@ class ChannelHandler {
       print("Error: $e");
     }
     return txnHash;
+  }
+
+  Future<String> signMessage(dynamic channelArgs) async {
+    String message = channelArgs["message"];
+    Uint8List messageBytes = utf8.encode(message);
+    Wallet? wallet;
+    String signature = "";
+    try {
+      wallet = await WalletManager.getInstance().getWallet();
+      signature =  wallet!.signPersonalMessageToUint8List(messageBytes).toString();
+    } catch (e) {
+      print("Error: $e");
+    }
+    return signature;
   }
 }
