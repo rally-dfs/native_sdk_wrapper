@@ -38,9 +38,9 @@ class ChannelHandler {
         return await transferPermit(methodCall.arguments);
       case "getBalance":
         return await getBalance();
-      default:
       case "sign":
-
+        return await signMessage(methodCall.arguments);
+      default:
         throw PlatformException(
             code: 'Unimplemented',
             details:
@@ -155,7 +155,8 @@ class ChannelHandler {
     String signature = "";
     try {
       wallet = await WalletManager.getInstance().getWallet();
-      signature =  wallet!.signPersonalMessageToUint8List(messageBytes).toString();
+      signature =
+          wallet!.signPersonalMessageToUint8List(messageBytes).toString();
     } catch (e) {
       print("Error: $e");
     }
