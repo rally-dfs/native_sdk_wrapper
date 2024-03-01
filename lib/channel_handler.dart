@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:convert/convert.dart';
 import 'package:flutter/services.dart';
 import 'package:rly_network_flutter_sdk/rly_network_flutter_sdk.dart';
 
@@ -101,7 +102,8 @@ class ChannelHandler {
     Uint8List rawSignature =
         wallet.signPersonalMessageToUint8List(messageBytes);
 
-    return utf8.decode(rawSignature);
+    String signatureAsHex = '0x${hex.encode(rawSignature)}|';
+    return signatureAsHex;
   }
 
   Future<dynamic> claimRly() async {
