@@ -30,6 +30,8 @@ class ChannelHandler {
         return await createWallet(methodCall.arguments);
       case "getWalletAddress":
         return await getWalletAddress();
+      case "getAccountPhrase":
+        return await getAccountPhrase();
       case "deleteWallet":
         return await deleteWallet();
       case "signMessage":
@@ -83,6 +85,13 @@ class ChannelHandler {
     print("calling getWalletAddress");
     String? address = await WalletManager.getInstance().getPublicAddress();
     return address ?? "no address";
+  }
+
+  /// Returns the mnemonic phrase of the current wallet.
+  /// If no wallet exists, returns "no phrase"
+  Future<String> getAccountPhrase() async {
+    String? phrase = await WalletManager.getInstance().getAccountPhrase();
+    return phrase ?? "no phrase";
   }
 
   Future<bool> deleteWallet() async {
