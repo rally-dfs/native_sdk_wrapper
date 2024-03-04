@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:convert/convert.dart';
 import 'package:flutter/services.dart';
 import 'package:rly_network_flutter_sdk/rly_network_flutter_sdk.dart';
 
@@ -29,6 +32,8 @@ class ChannelHandler {
         return await getWalletAddress();
       case "deleteWallet":
         return await deleteWallet();
+      case "signMessage":
+        return await signMessage(methodCall.arguments);
       case "configureEnvironment":
         return await configureEnvironment(methodCall.arguments);
       case "claimRly":
@@ -84,6 +89,21 @@ class ChannelHandler {
     print("calling deleteWallet");
     await WalletManager.getInstance().permanentlyDeleteWallet();
     return true;
+  }
+
+  Future<String> signMessage(dynamic channelArgs) async {
+    String message = channelArgs["message"];
+    Uint8List messageBytes = utf8.encode(message);
+    Wallet? wallet = await WalletManager.getInstance().getWallet();
+    if (wallet == null) {
+      throw Exception(
+          "Can not sign message without a wallet. Please create a wallet first.");
+    }
+    Uint8List rawSignature =
+        wallet.signPersonalMessageToUint8List(messageBytes);
+
+    String signatureAsHex = '0x${hex.encode(rawSignature)}|';
+    return signatureAsHex;
   }
 
   Future<dynamic> claimRly() async {
