@@ -111,7 +111,7 @@ class ChannelHandler {
     Uint8List rawSignature =
         wallet.signPersonalMessageToUint8List(messageBytes);
 
-    String signatureAsHex = '0x${hex.encode(rawSignature)}|';
+    String signatureAsHex = '0x${hex.encode(rawSignature)}';
     return signatureAsHex;
   }
 
