@@ -43,7 +43,7 @@ class ChannelHandler {
       case "transferPermit":
         return await transferPermit(methodCall.arguments);
       case "getBalance":
-        return await getBalance();
+        return await getBalance(methodCall.arguments);
       default:
         throw PlatformException(
             code: 'Unimplemented',
@@ -129,14 +129,19 @@ class ChannelHandler {
     return txnHash;
   }
 
-  Future<String> getBalance() async {
+  /// Returns the balance of a given ERC-20 token held by the current wallet
+  /// Defaults to using the RLY token if no token address is provided
+  /// channelArgs is expected to be a hash, with the key "tokenAddress" used to configred which token to query.
+  Future<String> getBalance(dynamic channelArgs) async {
     if (_currentNetwork == null) {
-      print("Missing network config");
       return "Missing network config";
     }
+    String? tokenAddress = channelArgs["tokenAddress"];
     String balance = "";
     try {
-      balance = (await _currentNetwork!.getExactBalance()).toString();
+      balance =
+          (await _currentNetwork!.getExactBalance(tokenAddress: tokenAddress))
+              .toString();
     } catch (e) {
       print("Error: $e");
     }
