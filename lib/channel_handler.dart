@@ -57,8 +57,8 @@ class ChannelHandler {
 
     if (channelArgs[1] == "mainnet") {
       _currentNetwork = rlyPolygonNetwork;
-    } else if (channelArgs[1] == "mumbai") {
-      _currentNetwork = rlyMumbaiNetwork;
+    } else if (channelArgs[1] == "amoy") {
+      _currentNetwork = rlyAmoyNetwork;
     } else {
       print("The network ${channelArgs[1]} is not valid");
     }
