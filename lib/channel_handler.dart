@@ -19,7 +19,6 @@ class ChannelHandler {
   }
 
   void register() {
-    print("Register called");
     _channel.setMethodCallHandler(_handleChannelMethodCall);
   }
 
@@ -57,9 +56,10 @@ class ChannelHandler {
 
     if (channelArgs[1] == "mainnet") {
       _currentNetwork = rlyPolygonNetwork;
-    } else if (channelArgs[1] == "mumbai") {
-      _currentNetwork = rlyMumbaiNetwork;
+    } else if (channelArgs[1] == "amoy") {
+      _currentNetwork = rlyAmoyNetwork;
     } else {
+      // ignore: avoid_print
       print("The network ${channelArgs[1]} is not valid");
     }
 
@@ -82,7 +82,6 @@ class ChannelHandler {
   }
 
   Future<String> getWalletAddress() async {
-    print("calling getWalletAddress");
     String? address = await WalletManager.getInstance().getPublicAddress();
     return address ?? "no address";
   }
@@ -95,7 +94,6 @@ class ChannelHandler {
   }
 
   Future<bool> deleteWallet() async {
-    print("calling deleteWallet");
     await WalletManager.getInstance().permanentlyDeleteWallet();
     return true;
   }
@@ -117,6 +115,7 @@ class ChannelHandler {
 
   Future<dynamic> claimRly() async {
     if (_currentNetwork == null) {
+      // ignore: avoid_print
       print("Missing network config");
       return false;
     }
@@ -124,6 +123,7 @@ class ChannelHandler {
     try {
       txnHash = await _currentNetwork!.claimRly();
     } catch (e) {
+      // ignore: avoid_print
       print("Error: $e");
     }
     return txnHash;
@@ -143,6 +143,7 @@ class ChannelHandler {
           (await _currentNetwork!.getExactBalance(tokenAddress: tokenAddress))
               .toString();
     } catch (e) {
+      // ignore: avoid_print
       print("Error: $e");
     }
     return balance;
@@ -156,6 +157,7 @@ class ChannelHandler {
   /// wrapperType (optional, default is ExecuteMetaTransaction)
   Future<String?> transferPermit(dynamic channelArgs) async {
     if (_currentNetwork == null) {
+      // ignore: avoid_print
       print("Missing network config");
       return null;
     }
@@ -167,13 +169,13 @@ class ChannelHandler {
         ? MetaTxMethod.Permit
         : MetaTxMethod.ExecuteMetaTransaction;
 
-    print("Going to transfer $amount to $destinationAddress");
     String txnHash = "";
     try {
       txnHash = await _currentNetwork!.transferExact(
           destinationAddress, BigInt.parse(amount), method,
           tokenAddress: tokenAddress);
     } catch (e) {
+      // ignore: avoid_print
       print("Error: $e");
     }
     return txnHash;
